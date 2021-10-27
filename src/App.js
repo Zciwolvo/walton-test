@@ -14,7 +14,7 @@ function App() {
         <
         Switch >
         <
-        Route path = "/"
+        Route path = "/walton-test"
         exact component = { Homepage }
         /> <
         Route path = "/Aktualności"
