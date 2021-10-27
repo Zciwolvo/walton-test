@@ -10,11 +10,11 @@ import { Serwis } from './containers/serwis';
 
 function App() {
     return ( <
-        Router >
+        Router basename=walton-test>
         <
         Switch >
         <
-        Route path = "/walton-test"
+        Route path = "/"
         exact component = { Homepage }
         /> <
         Route path = "/Aktualności"
