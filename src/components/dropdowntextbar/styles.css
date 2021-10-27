@@ -1,0 +1,73 @@
+.select-box--container-up {
+    width: 553px;
+    height: 48px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    box-shadow: -4px 8px 6px #00000029;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.select-box--container-down {
+    width: 553px;
+    height: 48px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    box-shadow: -4px 8px 6px #00000029;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.select-box--box {
+    margin-left: 4em;
+    margin-top: 1em;
+    width: 440px;
+    height: 48px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.select-box--items div {
+    z-index: 2;
+    box-shadow: -4px 8px 6px #0000001f;
+    height: 50px;
+    background-color: #fcfcfc;
+    padding: 6px;
+    padding-left: 20px;
+}
+
+.select-box--items div:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.select-box--arrow-up {
+    position: absolute;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 14px solid #F58500;
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
