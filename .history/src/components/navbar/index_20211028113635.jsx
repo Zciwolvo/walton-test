@@ -92,7 +92,7 @@ export function Navbar(props) {
               <NavLinks><Link to={"/O firmie"} onClick={() => {window.location.href="walton-test/O firmie"}} style={{ textDecoration: 'none', color:'black' }}>O firmie</Link></NavLinks>
               <NavLinks><Link to={"/Serwis"} onClick={() => {window.location.href="walton-test/Serwis"}} style={{ textDecoration: 'none', color:'black' }}>Serwis</Link></NavLinks>
               <NavLinks><Link to={"/Aktualności"} onClick={() => {window.location.href="walton-test/Aktualności"}} style={{ textDecoration: 'none', color:'black' }}>Aktualności</Link></NavLinks>
-              <NavLinksSpecial><Link to="/kontakt" onClick={() => {window.location.href="walton-test/kontakt"}} style={{ textDecoration: 'none', color:'white' }}>Kontakt</Link></NavLinksSpecial>
+              <NavLinksSpecial><Link to="kontakt" onClick={() => {window.location.href="walton-test/kontakt"}} style={{ textDecoration: 'none', color:'white' }}>Kontakt</Link></NavLinksSpecial>
           </Router>
       </TopContainer>
     </Container>
