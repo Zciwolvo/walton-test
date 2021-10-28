@@ -57,7 +57,7 @@ const Links = ["Kalkulator", "Realizacje", "Referencje", "O firmie", "Serwis", "
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-          <Router basename="walton-test">
+          <Router>
               <Link to="/" onClick={() => {window.location.href="/"}}><LogoImg src={WaltonLogo}/></Link>
               <NavLinks><Link to="/Usługi" onClick={() => {window.location.href="/Usługi"}} style={{ textDecoration: 'none', color:'black' }}>Usługi</Link></NavLinks>
               <NavLinks><Link to={"/Kalkulator"} onClick={() => {window.location.href="/Kalkulator"}} style={{ textDecoration: 'none', color:'black' }}>Kalkulator</Link></NavLinks>

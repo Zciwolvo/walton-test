@@ -83,7 +83,7 @@ export function Navbar(props) {
     <Container>
       <NavbarBurger /> 
       <TopContainer>
-          <Router basename="walton-test">
+          <Router>
               <Link to="/" onClick={() => {window.location.href="/"}}><LogoImg src={WaltonLogo}/></Link>
               <NavLinks><Link to="/Usługi" onClick={() => {window.location.href="/Usługi"}} style={{ textDecoration: 'none', color:'black' }}>Usługi</Link><Triangle></Triangle></NavLinks>
               <NavLinks><Link to={"/Kalkulator"} onClick={() => {window.location.href="/Kalkulator"}} style={{ textDecoration: 'none', color:'black' }}>Kalkulator</Link></NavLinks>
