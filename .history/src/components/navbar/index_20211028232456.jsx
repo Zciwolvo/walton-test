@@ -84,7 +84,7 @@ export function Navbar(props) {
       <NavbarBurger />
       <TopContainer>
           <HashRouter basename="/">
-              <Link to="/Home"><LogoImg src={WaltonLogo}/></Link>
+              <Link to="/walton-test"><LogoImg src={WaltonLogo}/></Link>
               <NavLinks><Link to="/Usługi" style={{ textDecoration: 'none', color:'black' }}>Usługi</Link><Triangle></Triangle></NavLinks>
             {Links.map(function (link){
                 return <NavLinks><Link to={ link } style={{ textDecoration: 'none', color:'black' }}>{link}</Link></NavLinks>

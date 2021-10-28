@@ -58,7 +58,7 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
           <HashRouter basename="/">
-              <Link to="/Home"><LogoImg src={WaltonLogo}/></Link>
+              <Link to="/"><LogoImg src={WaltonLogo}/></Link>
               {Links.map(function (link){
                 return <NavLinks><Link to={ link } style={{ textDecoration: 'none', color:'black' }}>{link}</Link></NavLinks>
             })}
