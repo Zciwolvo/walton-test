@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Link , BrowserRouter as Router } from "react-router-dom";
 import NavbarBurger from "../mobilenavbar";
 
 import WaltonLogo from "../../assets/logo/waltonlogo.png";
@@ -83,7 +83,7 @@ export function Navbar(props) {
     <Container>
       <NavbarBurger /> 
       <TopContainer>
-          <HashRouter basename="walton-test">
+          <Router basename="walton-test">
               <Link to="/" onClick={() => {window.location.href="/"}}><LogoImg src={WaltonLogo}/></Link>
               <NavLinks><Link to="/Usługi" onClick={() => {window.location.href="/Usługi"}} style={{ textDecoration: 'none', color:'black' }}>Usługi</Link><Triangle></Triangle></NavLinks>
               <NavLinks><Link to={"/Kalkulator"} onClick={() => {window.location.href="/Kalkulator"}} style={{ textDecoration: 'none', color:'black' }}>Kalkulator</Link></NavLinks>
@@ -93,7 +93,7 @@ export function Navbar(props) {
               <NavLinks><Link to={"/Serwis"} onClick={() => {window.location.href="/Serwis"}} style={{ textDecoration: 'none', color:'black' }}>Serwis</Link></NavLinks>
               <NavLinks><Link to={"/Aktualności"} onClick={() => {window.location.href="/Aktualności"}} style={{ textDecoration: 'none', color:'black' }}>Aktualności</Link></NavLinks>
               <NavLinksSpecial><Link to="/kontakt" onClick={() => {window.location.href="/kontakt"}} style={{ textDecoration: 'none', color:'white' }}>Kontakt</Link></NavLinksSpecial>
-          </HashRouter>
+          </Router>
       </TopContainer>
     </Container>
     );

@@ -1,5 +1,5 @@
 import './App.scss';
-import { Route, BrowserRouter as Router, Switch, HashRouter } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import { Homepage } from "./containers/homepage";
 import { Aktualnosci } from "./containers/aktualnosci";
@@ -10,7 +10,7 @@ import { Serwis } from './containers/serwis';
 
 function App() {
     return ( <
-        HashRouter basename = "walton-test" >
+        Router basename="walton-test">
         <
         Switch >
         <
@@ -33,7 +33,7 @@ function App() {
         exact component = { Serwis }
         />    < /
         Switch > <
-        /HashRouter >
+        /Router >
     )
 
 
