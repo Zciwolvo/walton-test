@@ -66,7 +66,7 @@ const RightNav = ({ open }) => {
               <NavLinks><Link to={"/O firmie"} onClick={() => {window.location.href="/O firmie"}} style={{ textDecoration: 'none', color:'black' }}>O firmie</Link></NavLinks>
               <NavLinks><Link to={"/Serwis"} onClick={() => {window.location.href="/Serwis"}} style={{ textDecoration: 'none', color:'black' }}>Serwis</Link></NavLinks>
               <NavLinks><Link to={"/Aktualności"} onClick={() => {window.location.href="/Aktualności"}} style={{ textDecoration: 'none', color:'black' }}>Aktualności</Link></NavLinks>
-              <NavLinks><Link to="/kontakt" style={{ textDecoration: 'none', color:'black' }}>Kontakt</Link></NavLinks>
+              <NavLinks><Link to="/kontakt" onClick={() => {window.location.href="/kontakt"}} style={{ textDecoration: 'none', color:'black' }}>Kontakt</Link></NavLinks>
           </HashRouter>
     </Ul>
   )
