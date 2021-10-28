@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/walton-test/static/css/main.b4ed5a12.chunk.css",
-    "main.js": "/walton-test/static/js/main.859ec448.chunk.js",
-    "main.js.map": "/walton-test/static/js/main.859ec448.chunk.js.map",
+    "main.js": "/walton-test/static/js/main.43884209.chunk.js",
+    "main.js.map": "/walton-test/static/js/main.43884209.chunk.js.map",
     "runtime-main.js": "/walton-test/static/js/runtime-main.c668e304.js",
     "runtime-main.js.map": "/walton-test/static/js/runtime-main.c668e304.js.map",
     "static/js/2.bac46a9b.chunk.js": "/walton-test/static/js/2.bac46a9b.chunk.js",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.c668e304.js",
     "static/js/2.bac46a9b.chunk.js",
     "static/css/main.b4ed5a12.chunk.css",
-    "static/js/main.859ec448.chunk.js"
+    "static/js/main.43884209.chunk.js"
   ]
 }
