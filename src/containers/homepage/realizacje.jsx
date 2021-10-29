@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link , BrowserRouter as Router } from "react-router-dom";
+import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
 import styled from "styled-components";
 
 import arrowLeft from "../../assets/logo/arrow-to-right-1.png"
@@ -240,17 +240,16 @@ const Realizacje = () => {
                         <BoldText>Wrocław</BoldText>
                     </TextRow>
                     <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex diam, elementum sed tellus nec, fermentum molestie libero. Curabitur rutrum lacinia tincidunt.</SmallText>
-                    <Router>
+                    <HashRouter basename="/">
                       
                       <Button 
-                      onClick={() => {window.location.href="/Realizacje"}}
                       props = {{width:width, height:height}}
                       onMouseDown={() => setButtonStyle(0.98*288, 0.98*48)}
                       onMouseUp={() => setButtonStyle(1*288, 1*48)}
                       ><Link to="/Realizacje" style={{width:"0px", height:"0px"}}/>
                         <ButtonText>Zobacz wszystkie realizacje</ButtonText></Button>
                      
-                    </Router>
+                    </HashRouter>
                 </LeftSide>
                 <RightSide>
                   <Column>

@@ -111,7 +111,7 @@ const ButtonText = styled.p`
     text-align: center;
     font-family: Spartan;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: 0px;
     color: #f4f4f4;
     opacity: 1;
@@ -222,6 +222,12 @@ function Popup(props) {
       }
     }
 
+    const changeColor = (name, city, number, color) => {
+        if (name == null && city == null && number == null && human != true) {
+          setBackground(color)
+        }
+      }
+
     return (props.trigger) ? (
         <PopupBody>
             <PopupBackground onClick={() => props.setTrigger(false)}/>
@@ -252,9 +258,9 @@ function Popup(props) {
                                           /></CaptchaBody>
                         <ContactButton
                             props={{width:width, height:height, background:background}}
-                            onMouseDown={() => setButtonStyle(0.98 * 288, 0.98 * 48)}
-                            onMouseUp={() => setButtonStyle(1 * 288, 1 * 48)}
                             onClick={() => checkState(name,city,number)}
+                            onMouseEnter={() => changeColor(name,city,number,"#a4b621")}
+                            onMouseLeave={() => changeColor(name,city,number,"#93A603")}
                         >
                             <ButtonText>{text}</ButtonText>
                         </ContactButton>

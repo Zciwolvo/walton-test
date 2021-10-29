@@ -14,6 +14,7 @@ const SelectboxboxAbove = styled.div`
   width: 440px;
   height: 48px;
   position: absolute;
+  border-radius: 10px;
   background-color: #fcfcfc;
   z-index: 12;
   margin: 1em auto 0 auto;
@@ -39,6 +40,7 @@ const Selectboxbox = styled.div`
   width: 440px;
   height: 48px;
   position: relative;
+  border-radius: 10px;
   z-index: 10;
   margin: 1em auto 0 auto;
   @media (max-width: 800px) {
@@ -73,6 +75,7 @@ const Selectboxitems = styled.div`
 transition: all 0.7s ease-in;
 display: block;
 z-index: 1;
+border-radius: 10px;
 div {
   box-shadow: -4px 8px 6px #0000001f;
   z-index: 2;
@@ -98,6 +101,7 @@ const Selectboxarrow = styled.img`
   top: 10px;
   margin: 0;
   padding: 0;
+  z-index: 15;
   display: inline-block;
   position: absolute;
   right: 15px;

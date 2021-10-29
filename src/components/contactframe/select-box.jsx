@@ -17,6 +17,7 @@ const SelectboxboxAbove = styled.div`
   background-color: #fcfcfc;
   z-index: 12;
   margin: 1em auto 0 auto;
+  border-radius: 10px;
   p{
     padding: 1em;
     padding-left: 1.27em;
@@ -38,6 +39,7 @@ const Selectboxbox = styled.div`
   box-shadow: -4px 8px 6px #0000001f;
   width: 440px;
   height: 48px;
+  border-radius: 10px;
   position: relative;
   z-index: 10;
   margin: 1em auto 0 auto;

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import { Link , BrowserRouter as Router } from "react-router-dom";
+import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
 
 import background from "../../assets/photos/ricardo-gomez-angel-MagdWoazARo-unsplash.jpeg";
 import photo1 from "../../assets/photos/20190519_121953@2x.png"
@@ -123,16 +123,15 @@ const Serwis = () => {
                 <BackgroundFilter>
                     <BigText>SERWIS I PLIKI DO POBRANIA</BigText>
                     <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex diam, elementum sed tellus nec, fermentum molestie libero. Curabitur rutrum lacinia tincidunt.</SmallText>
-                    <Router>
+                    <HashRouter basename="/">
                       <Link to="/Serwis">
                         <Button 
-                        onClick={() => {window.location.href="/Serwis"}}
                         props = {{width:width, height:height}}
                         onMouseDown={() => setButtonStyle(0.98*288, 0.98*48)}
                         onMouseUp={() => setButtonStyle(1*288, 1*48)}
                         ><ButtonText>Zrób to sam</ButtonText></Button>
                     </Link>
-                   </Router>
+                   </HashRouter>
                 </BackgroundFilter>
             </Background>
         </Container>

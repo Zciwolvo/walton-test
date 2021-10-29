@@ -41,6 +41,7 @@ const Background = styled.div`
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: center;
+        background-position: center;
         width: ${windowWidth}px;
         text-align: center;
 }
