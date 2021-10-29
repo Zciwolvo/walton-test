@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ContactFrame from "../../components/contactframeorange";
 
-import BackgroundPhoto from "../../assets/photos/father.jpg"
+import BackgroundPhoto from "../../assets/photos/hands.jpeg"
 import { BigLogos } from "../../components/big_logos_bar";
 
 const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
@@ -26,9 +26,9 @@ const MainContainer = styled.div`
 `;
 
 const Background = styled.div`
-max-width: 1980px;
     position: absolute;
     z-index: -1;
+    max-width: 1980px;
     width: 100%;
     height: 762px;
     display: flex;
@@ -37,6 +37,7 @@ max-width: 1980px;
     align-items: center;
     justify-content: center;
     background-image: url(${BackgroundPhoto});
+    background-size: cover;
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: center;

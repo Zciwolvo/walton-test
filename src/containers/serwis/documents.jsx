@@ -287,7 +287,7 @@ export function Documents(params) {
             <BigTextUnderline/>
           </HeaderContainerMobile>
           <Sides>
-              <Column>
+              <Column style={{marginLeft:0}}>
                 <SmallBlackText>Problem nr1</SmallBlackText>
                 <SmallBlackText>Problem nr1</SmallBlackText>
                 <SmallBlackText>Problem nr1</SmallBlackText>

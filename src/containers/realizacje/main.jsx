@@ -4,7 +4,7 @@ import Popup from "../../components/popup";
 
 import ContactFrame from "../../components/contactframeorange";
 
-import BackgroundPhoto from "../../assets/photos/dom_realizacje.jpg"
+import BackgroundPhoto from "../../assets/photos/dom_realizacje.jpeg"
 
 const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
 
@@ -35,6 +35,7 @@ const Background = styled.div`
     position: absolute;
     z-index: -1;
     background-image: url(${BackgroundPhoto});
+    background-size: cover;
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: center;

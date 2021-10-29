@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ContactFrame from "../../components/contactframeorange";
 import Popup from "../../components/popup";
 
-import BackgroundPhoto from "../../assets/photos/father.jpg"
+import BackgroundPhoto from "../../assets/photos/father.jpeg"
 
 const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
 
@@ -37,6 +37,7 @@ const Background = styled.div`
     align-content: center;
     flex-direction: row;
     background-image: url(${BackgroundPhoto});
+    background-size: cover;
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: center;
@@ -88,7 +89,7 @@ const NormalText = styled.h1`
 
 const SmallText = styled.p`
     width: 30em;
-    text-align: left;
+    text-align: center;
     font-family: Rubik;
     text-shadow: 0px 3px 6px #00000076;
     font-size: 1em;
@@ -131,7 +132,7 @@ const SmallTextMobile = styled.p`
 
 const Column = styled.div`
     display: flex;
-    text-align: left;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-content: center;
