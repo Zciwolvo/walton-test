@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/walton-test/static/css/main.b4ed5a12.chunk.css",
-    "main.js": "/walton-test/static/js/main.253df27f.chunk.js",
-    "main.js.map": "/walton-test/static/js/main.253df27f.chunk.js.map",
+    "main.js": "/walton-test/static/js/main.1672ab68.chunk.js",
+    "main.js.map": "/walton-test/static/js/main.1672ab68.chunk.js.map",
     "runtime-main.js": "/walton-test/static/js/runtime-main.c668e304.js",
     "runtime-main.js.map": "/walton-test/static/js/runtime-main.c668e304.js.map",
     "static/js/2.bac46a9b.chunk.js": "/walton-test/static/js/2.bac46a9b.chunk.js",
@@ -19,21 +19,21 @@
     "static/media/Mask Group 2@2x.fed7a159.png": "/walton-test/static/media/Mask Group 2@2x.fed7a159.png",
     "static/media/Mask Group 3@2x.4825356f.png": "/walton-test/static/media/Mask Group 3@2x.4825356f.png",
     "static/media/Photogenica-PHX9534407@2x.4e70d13a.png": "/walton-test/static/media/Photogenica-PHX9534407@2x.4e70d13a.png",
-    "static/media/circle.98b6aacc.png": "/walton-test/static/media/circle.98b6aacc.png",
     "static/media/dom.381d4ae1.png": "/walton-test/static/media/dom.381d4ae1.png",
-    "static/media/dom_realizacje.dcced3ee.jpg": "/walton-test/static/media/dom_realizacje.dcced3ee.jpg",
-    "static/media/father.7bb7c616.jpg": "/walton-test/static/media/father.7bb7c616.jpg",
-    "static/media/file.847643cc.png": "/walton-test/static/media/file.847643cc.png",
+    "static/media/dom_realizacje.829ebf0b.jpeg": "/walton-test/static/media/dom_realizacje.829ebf0b.jpeg",
+    "static/media/father.33cf9a7f.jpeg": "/walton-test/static/media/father.33cf9a7f.jpeg",
+    "static/media/hands.a5a52d30.jpeg": "/walton-test/static/media/hands.a5a52d30.jpeg",
     "static/media/pexels-energepiccom-288477.ff4e1002.jpg": "/walton-test/static/media/pexels-energepiccom-288477.ff4e1002.jpg",
     "static/media/pexels-los-muertos-crew-8853507@2x.6915cc04.png": "/walton-test/static/media/pexels-los-muertos-crew-8853507@2x.6915cc04.png",
     "static/media/pompa-ciepla.bda1718e.jpeg": "/walton-test/static/media/pompa-ciepla.bda1718e.jpeg",
     "static/media/ricardo-gomez-angel-MagdWoazARo-unsplash.59bfc5e7.jpeg": "/walton-test/static/media/ricardo-gomez-angel-MagdWoazARo-unsplash.59bfc5e7.jpeg",
+    "static/media/serwis.a508eb66.jpeg": "/walton-test/static/media/serwis.a508eb66.jpeg",
     "static/media/solar.6e5cd1c2.jpg": "/walton-test/static/media/solar.6e5cd1c2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c668e304.js",
     "static/js/2.bac46a9b.chunk.js",
     "static/css/main.b4ed5a12.chunk.css",
-    "static/js/main.253df27f.chunk.js"
+    "static/js/main.1672ab68.chunk.js"
   ]
 }
