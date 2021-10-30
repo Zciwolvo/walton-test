@@ -106,6 +106,10 @@ const Container = styled.div`
       opacity: 1;
     `;
 
+const ScrollTop = () => {
+  window.scrollTo(0,0)  
+  }
+
 const Serwis = () => {
 
 
@@ -129,6 +133,7 @@ const Serwis = () => {
                         props = {{width:width, height:height}}
                         onMouseDown={() => setButtonStyle(0.98*288, 0.98*48)}
                         onMouseUp={() => setButtonStyle(1*288, 1*48)}
+                        onClick={ScrollTop}
                         ><ButtonText>Zrób to sam</ButtonText></Button>
                     </Link>
                    </HashRouter>

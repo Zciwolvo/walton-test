@@ -222,6 +222,10 @@ const Realizacje = () => {
         SetWidth(width)
         SetHeight(height)
     }
+    
+    const ScrollTop = () => {
+    window.scrollTo(0,0)  
+    }
 
     return(
         <Container>
@@ -241,13 +245,15 @@ const Realizacje = () => {
                     </TextRow>
                     <SmallText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex diam, elementum sed tellus nec, fermentum molestie libero. Curabitur rutrum lacinia tincidunt.</SmallText>
                     <HashRouter basename="/">
-                      
+                      <Link to="/Realizacje" style={{width:"0px", height:"0px"}}>
                       <Button 
                       props = {{width:width, height:height}}
                       onMouseDown={() => setButtonStyle(0.98*288, 0.98*48)}
                       onMouseUp={() => setButtonStyle(1*288, 1*48)}
-                      ><Link to="/Realizacje" style={{width:"0px", height:"0px"}}/>
+                     
+                      >
                         <ButtonText>Zobacz wszystkie realizacje</ButtonText></Button>
+                      </Link>
                      
                     </HashRouter>
                 </LeftSide>

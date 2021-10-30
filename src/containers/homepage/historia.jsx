@@ -248,6 +248,10 @@ const Historia = () => {
         setTradycjaColor(tradycjacolor)
     }
 
+    const ScrollTop = () => {
+      window.scrollTo(0,0)  
+      }
+
 
     return(
         <Container>
@@ -261,6 +265,7 @@ const Historia = () => {
                     props={{width:width, height:height}}
                     onMouseDown={() => setButtonStyle(0.98*288, 0.98*48)}
                     onMouseUp={() => setButtonStyle(1*288, 1*48)}
+                    onClick={ScrollTop}
                     ><ButtonText>Poznaj historię firmy</ButtonText></Button>
                     <TextRow>
                         <Lokalnosc>Lokalność</Lokalnosc>
