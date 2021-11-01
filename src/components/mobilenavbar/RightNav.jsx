@@ -52,15 +52,19 @@ const LogoImg = styled.img`
   height: 67px;
 `;
 
-const Links = ["Kalkulator", "Realizacje", "Referencje", "O firmie", "Serwis", "Aktualności", "Kontakt"]
+const Links = ["Usługi", "Kalkulator", "Realizacje", "Referencje", "O firmie", "Serwis", "Aktualności", "Kontakt"]
+
+const ScrollTop = () => {
+  window.scrollTo(0,0)  
+  }
 
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
           <HashRouter basename="/">
-              <Link to="/"><LogoImg src={WaltonLogo}/></Link>
+              <Link to="/" onClick={ScrollTop}><LogoImg src={WaltonLogo}/></Link>
               {Links.map(function (link){
-                return <NavLinks><Link to={ link } style={{ textDecoration: 'none', color:'black' }}>{link}</Link></NavLinks>
+                return <NavLinks><Link to={ link } style={{ textDecoration: 'none', color:'black' }} onClick={ScrollTop}>{link}</Link></NavLinks>
             })}
           </HashRouter>
     </Ul>

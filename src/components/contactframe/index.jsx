@@ -160,29 +160,7 @@ const OrangeShape = styled.div`
     }
 `;
 
-const Block = styled.div`
-  width: 440px;
-  height: 165px;
-  border-radius: 10px;
-  background-color: white;
-  position: absolute;
-  z-index: 11;
-  @media (max-width: 800px) {
-      display: none;
-    }
-`;
 
-const Block2 = styled.div`
-  width: 500px;
-  height: 130px;
-  border-radius: 10px;
-  background-color: white;
-  position: absolute;
-  z-index: 11;
-  @media (max-width: 800px) {
-      display: none;
-    }
-`;
 
 const ShapeContainer = styled.div`
   width: 100%;
@@ -259,8 +237,6 @@ const ContactFrame = () => {
   return (
     <FrameContainer>
       <Frame>
-          <Block/>
-          <Block2/>
           <BigText>Skontaktuj się z Nami</BigText>
           <BigTextMobile>Skontaktuj się<br/>z Nami</BigTextMobile>
           <SelectBox />

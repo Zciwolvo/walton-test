@@ -5,10 +5,6 @@ import DropdownArrow from "../../assets/logo/dropboxarrow.png"
 
 const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
 
-const Container = styled.div`
-
-`;
-
 const SelectboxboxAbove = styled.div`
   transition: all 0.5s;
   width: 440px;
@@ -17,7 +13,6 @@ const SelectboxboxAbove = styled.div`
   border-radius: 10px;
   background-color: #fcfcfc;
   z-index: 12;
-  margin: 1em auto 0 auto;
   p{
     padding: 1em;
     padding-left: 1.27em;
@@ -30,17 +25,14 @@ const SelectboxboxAbove = styled.div`
   @media (max-width: 800px) {
       width: ${windowWidth*0.7}px;
       text-align: left;
-      margin: 1em 0 0 0;
     }
 `;
 
 const Selectboxbox = styled.div`
-  transition: all 0.5s;  
   box-shadow: -4px 8px 6px #0000001f;
   width: 440px;
   height: 48px;
   position: relative;
-  border-radius: 10px;
   z-index: 10;
   margin: 1em auto 0 auto;
   @media (max-width: 800px) {
@@ -60,6 +52,7 @@ const Selectboxselecteditem = styled.div`
   font-family: Rubik;
   font-size: 1em;
   z-index: 6;
+  border-radius: 10px;
   transition: all 0.5s;
   p{
     font-family: Rubik;
@@ -72,14 +65,13 @@ const Selectboxselecteditem = styled.div`
 `;
 
 const Selectboxitems = styled.div`
-transition: all 0.7s ease-in;
 display: block;
 z-index: 1;
-border-radius: 10px;
+transition: all 0.3s;
 div {
+  transition: all 0.5s;
   box-shadow: -4px 8px 6px #0000001f;
   z-index: 2;
-  height: 50px;
   background-color: #fcfcfc;
   padding: 8px;
   padding-left: 20px;
@@ -126,28 +118,29 @@ const SelectBox = () => {
 
 
   return(
-    <Container>
-      <SelectboxboxAbove onClick={() => dropdownstate(dropdown)} 
-      style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
+      <Selectboxbox onClick={() => dropdownstate(dropdown)}>
+      <SelectboxboxAbove onClick={() => dropdownstate(dropdown)} >
         <p>{selecteditem}</p>
+      <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
       </SelectboxboxAbove>
-      <Selectboxbox onClick={() => dropdownstate(dropdown)} style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
-        <Selectboxselecteditem>
+      
+        <Selectboxselecteditem style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}> 
           <p>{selecteditem}</p>
         </Selectboxselecteditem>
-        <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
-        <Selectboxitems style={{marginTop: dropdown ? "0" : "-148px", visibility: dropdown ? "visible" : "hidden"}}>
+        
+        <Selectboxitems style={{transform: dropdown ? "translateY(0em)" : "translateY(-3em)", visibility: dropdown ? "visible" : "hidden"}} >
         {items.map((item) => (
                 <div
+                  style={{height: dropdown ? "48px" : "0", borderRadius: dropdown ? "0" : "10px"}}
                   key={item.id}
                   onClick={() => setSelectedItem(item.value)}
+                  
                 >
-                  <p>{item.value}</p>
+                  <p style={{visibility: dropdown ? "visible" : "hidden"}}>{item.value}</p>
                 </div>
               ))}
         </Selectboxitems>
       </Selectboxbox>
-    </Container>
   )
 }
 

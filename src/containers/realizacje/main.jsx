@@ -19,6 +19,7 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   @media (max-width: 800px) {
+    height: 100%;
     flex-direction: column;
     align-items: center;
     width: ${windowWidth*0.95}px;
@@ -29,7 +30,7 @@ const MainContainer = styled.div`
 const Background = styled.div`
     width: 100%;
     max-width: 1980px;
-    height: 882px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -90,6 +91,7 @@ const NormalText = styled.h1`
 const SmallText = styled.p`
     width: 30em;
     text-align: left;
+    text-shadow: 1px 1px 2px black;
     font-family: Rubik;
     font-size: 1em;
     font-weight: 300;

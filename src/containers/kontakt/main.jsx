@@ -22,6 +22,7 @@ const MainContainer = styled.div`
     align-items: center;
     width: ${windowWidth*0.95}px;
     text-align: center;
+    height: 100%;
 }
 `;
 
@@ -30,7 +31,7 @@ const Background = styled.div`
     z-index: -1;
     max-width: 1980px;
     width: 100%;
-    height: 762px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +93,7 @@ const SmallText = styled.p`
     width: 30em;
     text-align: center;
     font-family: Rubik;
-    text-shadow: 0px 3px 6px #00000076;
+    text-shadow: 1px 1px 2px black;
     font-size: 1em;
     font-weight: 300;
     letter-spacing: 0px;

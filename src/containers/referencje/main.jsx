@@ -30,7 +30,7 @@ const Background = styled.div`
     z-index: -1;
     max-width: 1980px;
     width: 100%;
-    height: 762px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -52,7 +52,7 @@ const Background = styled.div`
 const BigText = styled.h1`
     text-align: left;
     font-family: Rubik;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 600;
     letter-spacing: 0px;
     color: #FCFCFC;
@@ -73,7 +73,7 @@ const BigText = styled.h1`
 const NormalText = styled.h1`
     text-align: left;
     font-family: Rubik;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 600;
     letter-spacing: 0px;
     color: #FCFCFC;
@@ -91,8 +91,9 @@ const NormalText = styled.h1`
 
 const SmallText = styled.p`
     width: 30em;
-    text-align: left;
+    text-align: center;
     font-family: Rubik;
+    text-shadow: 1px 1px 2px black;
     font-size: 1em;
     font-weight: 300;
     letter-spacing: 0px;
@@ -133,7 +134,7 @@ const SmallTextMobile = styled.p`
 
 const Column = styled.div`
     width: 100%;
-    height: 700px;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +149,7 @@ export function MainSection(params) {
         <MainContainer>
             <Background/>
                     <Column>
-                        <BigText>SETKI INSTALACJI</BigText>
+                        <BigText>ZAUFAŁO NAM SETKI RODZIN I FIRM</BigText>
                         <NormalText>Na terenie całej Polski</NormalText>
                         <SmallTextMobile>Walton Consulting to specjaliści w swojej dziedzinie. Potrafimy doradzać, wskazywać możliwości<br/>i realizować powierzone zadania. Od 2004 roku<br/>z powodzeniem funkcjonujemy dostarczając naszym klientom rozwiązania z zakresu rekrutacji<br/>na stanowiska średniego i wyższego szczebla zarządzania oraz realizując projekty doradcze<br/>z obszaru Human Resources. Pomagamy naszym klientom w finansowaniu inwestycji.</SmallTextMobile>
                         <SmallText>Walton Consulting to specjaliści w swojej dziedzinie. Potrafimy doradzać, wskazywać możliwości i realizować powierzone zadania. Od 2004 roku z powodzeniem funkcjonujemy dostarczając naszym klientom rozwiązania z zakresu rekrutacji na stanowiska średniego i wyższego szczebla zarządzania oraz realizując projekty doradcze z obszaru Human Resources. Pomagamy naszym klientom w finansowaniu inwestycji.</SmallText>
