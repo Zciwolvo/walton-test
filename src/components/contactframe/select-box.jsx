@@ -124,13 +124,14 @@ const SelectBox = () => {
   <Selectboxbox onClick={() => dropdownstate(dropdown)} style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
       <SelectboxboxAbove onClick={() => dropdownstate(dropdown)} 
       style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
+        <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
         <p>{selecteditem}</p>
       </SelectboxboxAbove>
       
         <Selectboxselecteditem style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
           <p>{selecteditem}</p>
         </Selectboxselecteditem>
-        <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
+        
         <Selectboxitems style={{transform: dropdown ? "translateY(0em)" : "translateY(-3em)", visibility: dropdown ? "visible" : "hidden"}}>
         {items.map((item) => (
                 <div
