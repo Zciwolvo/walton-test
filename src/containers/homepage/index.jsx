@@ -1,8 +1,8 @@
 import React from  'react';
 import styled from "styled-components";
-import { Navbar } from "../../components/navbar";
+import Navbar from "../../components/navbar";
 import MainSection from "./main";
-import {Footer} from "../../components/footer";
+import Footer from "../../components/footer";
 import Calc from "./calculator";
 import Fotowoltaika from "./fotowoltaika";
 import Pompy from "./pompy";
@@ -14,7 +14,7 @@ import Pytania from "./pytania";
 import Serwis from "./serwis";
 import Promo from "../../components/promo";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PageContainer = styled.div`
   width: 100%;
@@ -31,7 +31,7 @@ const PageContainer = styled.div`
     }
 `;
 
-export function Homepage(props) {
+const Homepage = (props) => {
     return (
     <PageContainer>
         <Navbar/>
@@ -50,3 +50,5 @@ export function Homepage(props) {
     </PageContainer>
     );
 }
+
+export default Homepage;

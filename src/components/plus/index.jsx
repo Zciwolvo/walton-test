@@ -40,7 +40,7 @@ const HorizontalBar = styled.div`
 `;
 
 
-export function Plus(props) {
+const Plus = (props) => {
     return (
             <PlusContainer>
                 <Circle>
@@ -50,3 +50,5 @@ export function Plus(props) {
             </PlusContainer>
     )
 }
+
+export default Plus;

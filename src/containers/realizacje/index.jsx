@@ -1,12 +1,12 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
-import { Navbar } from "../../components/navbar";
+import Navbar from "../../components/navbar";
 import Promo from "../../components/promo";
-import { Instalacje } from "./instalacje";
-import { MainSection } from "./main";
-import { Footer } from "../../components/footer";
+import Instalacje from "./instalacje";
+import MainSection from "./main";
+import Footer from "../../components/footer";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PageContainer = styled.div`
     width: 100%;
@@ -24,7 +24,7 @@ const PageContainer = styled.div`
 `;
 
 
-export function Realizacje(params) {
+const Realizacje = (params) => {
     return(
         <PageContainer>
             <Navbar/>
@@ -35,3 +35,5 @@ export function Realizacje(params) {
         </PageContainer>
     )
 }
+
+export default Realizacje;

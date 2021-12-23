@@ -1,12 +1,10 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 
-import ContactFrame from "../../components/contactframeorange";
-
 import BackgroundPhoto from "../../assets/photos/hands.jpeg"
-import { BigLogos } from "../../components/big_logos_bar";
+import BigLogos from "../../components/big_logos_bar";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const MainContainer = styled.div`
   width: 70%;
@@ -144,7 +142,7 @@ const Column = styled.div`
 
 
 
-export function MainSection(params) {
+const MainSection = (params) => {
     return(
         <MainContainer>
             <Background/>
@@ -158,3 +156,5 @@ export function MainSection(params) {
         </MainContainer>
     )
 }
+
+export default MainSection;

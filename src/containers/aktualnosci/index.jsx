@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Footer } from "../../components/footer";
-import { Navbar } from "../../components/navbar";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
 import MainSection from "./main";
-import { Posty } from "./posty";
+import Posty from "./posty";
 import Promo from "../../components/promo";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PageContainer = styled.div`
     width: 100%;
@@ -23,7 +23,7 @@ const PageContainer = styled.div`
     }
 `;
 
-export function Aktualnosci(params) {
+const Aktualnosci = (params) => {
     return(
         <PageContainer>
             <Navbar/>
@@ -34,3 +34,5 @@ export function Aktualnosci(params) {
         </PageContainer>
     )
 }
+
+export default Aktualnosci;

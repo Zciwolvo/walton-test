@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Link , BrowserRouter as HashRouter } from "react-router-dom";
 
 import background from "../../assets/photos/ricardo-gomez-angel-MagdWoazARo-unsplash.jpeg";
-import photo1 from "../../assets/photos/20190519_121953@2x.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;

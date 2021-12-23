@@ -96,7 +96,7 @@ const NormalText = styled.h1`
   opacity: 1;
 `;
 
-export function BigLogos(props){
+const BigLogos = (props) => {
     return(
         <LogosContainer>
             <LogoRow>
@@ -127,3 +127,5 @@ export function BigLogos(props){
         </LogosContainer>
     )
 }
+
+export default BigLogos;

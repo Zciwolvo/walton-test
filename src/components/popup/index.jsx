@@ -1,11 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SelectBox from "../contactframe/select-box";
 import ReCAPTCHA from 'react-google-recaptcha'
+import ErrorPopup from "../errorpopup/index.jsx";
 
 import Photo from "../../assets/photos/pexels-energepiccom-288477.jpg"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PopupBody = styled.div`
     top: 0;
@@ -170,20 +171,8 @@ const Row = styled.div`
 }
 `;
 
-const Block = styled.div`
-  width: 440px;
-  height: 120px;
-  top: 10px;
-  border-radius: 10px;
-  background-color: white;
-  position: absolute;
-  z-index: 11;
-  @media (max-width: 800px) {
-      display: none;
-    }
-`;
 
-function Popup(props) {
+const Popup = (props) => {
 
     const [human, setHuman] = useState(false);
 
@@ -203,8 +192,9 @@ function Popup(props) {
     const [text, setText] = useState("Wyślij wiadomość. Oddzwonimy");
     const [width, SetWidth] = useState(288 * 1);
     const [height, SetHeight] = useState(48 * 1);
+    const [state, SetState] = useState(false);
     
-  
+    const [selecteditem, setSelectedItem] = useState("Wybierz temat")
   
     const setButtonStyle = (width, height) => {
       SetWidth(width);
@@ -217,13 +207,17 @@ function Popup(props) {
     };
 
     const checkState = (name, city, number) => {
-      if (name != null && city != null && number != null && human == true) {
+      if (name != null && city != null && number != null && human === true && selecteditem !== "Wybierz temat") {
         setStyle("#F58500", "DZIĘKUJEMY ZA WIADOMOŚĆ", setButtonStyle(1 * 288, 1 * 48))
+        SetState(false);
+      }
+      else{
+          SetState(true);
       }
     }
 
     const changeColor = (name, city, number, color) => {
-        if (name == null && city == null && number == null && human != true) {
+        if (name == null && city == null && number == null && human !== true && selecteditem === "Wybierz temat") {
           setBackground(color)
         }
       }
@@ -232,19 +226,11 @@ function Popup(props) {
         <PopupBody>
             <PopupBackground onClick={() => props.setTrigger(false)}/>
             <PopupInside>
-                <Block/>
                 <Sides>
                     <LeftSide>
                         <CloseButton onClick={() => props.setTrigger(false)}>X</CloseButton>
                         <BlueText style={{zIndex:"12"}}>Temat</BlueText>
-                        <SelectBox
-                        placeholder={[{value:"Wybierz temat", id: 0}]}
-                        items={[
-                        { value: "Temat1", id: 1 },
-                        { value: "Temat2", id: 2 },
-                        { value: "Temat3", id: 3 },
-                        ]}
-                        />
+                        <SelectBox selected={selecteditem} onChange={(value) => setSelectedItem(value)}/>
                         <BlueText>Imię i Nazwisko</BlueText>
                         <Bars type="text" placeholder="Imię i Nazwisko" value={name} onChange={event => setName(event.target.value)}></Bars>
                         <BlueText>Miejscowość</BlueText>
@@ -276,8 +262,9 @@ function Popup(props) {
                     </RightSide>
                 </Sides>
             </PopupInside>
+            <ErrorPopup name={name} city={city} number={number} item={selecteditem} human={human} trigger={state} setTrigger={SetState}/>
         </PopupBody>
     ) : "";
 }
 
-export default Popup
+export default Popup;

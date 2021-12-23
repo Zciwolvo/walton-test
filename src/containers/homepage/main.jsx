@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import { BigLogos } from "../../components/big_logos_bar";
+import BigLogos from "../../components/big_logos_bar";
 import { Link , BrowserRouter as Router } from "react-router-dom";
-import {SmallLogos} from "../../components/small_logos_bar";
+import SmallLogos from "../../components/small_logos_bar";
 import Popup from "../../components/popup";
 
 import dom from "../../assets/photos/dom.png";
 import rectangle from "../../assets/photos/prostokat.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const MainContainer = styled.div`
 width: 70%;
@@ -119,12 +119,6 @@ display: flex;
 flex-direction: column;
 `;
 
-const Bars = styled.div`
-width: 407px;
-height: 0px;
-border: 5px solid #264980;
-opacity: 1;
-`;
 
 const Sides = styled.div`
 display: flex;

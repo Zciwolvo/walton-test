@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import { BigLogos } from "../../components/big_logos_bar";
+import BigLogos from "../../components/big_logos_bar";
 import { Link , BrowserRouter as Router } from "react-router-dom";
-import {SmallLogos} from "../../components/small_logos_bar";
+import SmallLogos from "../../components/small_logos_bar";
 import Popup from "../../components/popup";
 
 import dom from "../../assets/photos/dom.png";  
@@ -84,15 +84,6 @@ margin-top: -3%;
 }
 `;
 
-const Rectangle = styled.img`
-width: 100%;
-height: 100%;
-border-radius: 10px 10px 10px 0px;
-opacity: 1;
-z-index: 2;
-margin-top: 5%;
-margin-left: -0.5em;
-`;
 
 const LeftSide = styled.div`
 flex-direction: column;

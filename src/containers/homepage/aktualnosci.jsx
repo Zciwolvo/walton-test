@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import boltLogo from "../../assets/logo/bolt.png";
 import photo1 from "../../assets/photos/20190519_121953@2x.png"
 import photo2 from "../../assets/photos/pexels-los-muertos-crew-8853507@2x.png"
 import photo3 from "../../assets/photos/Photogenica-PHX9534407@2x.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;

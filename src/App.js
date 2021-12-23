@@ -1,12 +1,12 @@
 import './App.scss';
 import { Route, BrowserRouter as Router, Switch, HashRouter } from "react-router-dom";
 
-import { Homepage } from "./containers/homepage";
-import { Aktualnosci } from "./containers/aktualnosci";
-import { Kontakt } from "./containers/kontakt";
-import { Realizacje } from './containers/realizacje';
-import { Referencje } from './containers/referencje';
-import { Serwis } from './containers/serwis';
+import Homepage from "./containers/homepage";
+import Aktualnosci from "./containers/aktualnosci";
+import Kontakt from "./containers/kontakt";
+import Realizacje from './containers/realizacje';
+import Referencje from './containers/referencje';
+import Serwis from './containers/serwis';
 
 function App() {
     return ( <

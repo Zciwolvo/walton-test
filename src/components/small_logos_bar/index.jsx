@@ -58,7 +58,7 @@ const TemperatureLogo = styled.img`
   opacity: 1;
 `;
 
-export function SmallLogos(props){
+const SmallLogos = (props) => {
     return(
       <Column>
         <LogosContainer>
@@ -71,3 +71,5 @@ export function SmallLogos(props){
       </Column>
     )
 }
+
+export default SmallLogos;

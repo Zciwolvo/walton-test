@@ -7,7 +7,7 @@ import markerLogo from "../../assets/logo/lokalizacja.png";
 import phoneLogo from "../../assets/logo/telefon.png";
 import mailLogo from "../../assets/logo/mail.png";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -181,7 +181,7 @@ const Serwis = ["Zrób to sam", "Plik nr 1", "Plik nr 2", "Plik nr 3", "Plik nr 
 const Firma = ["Historia", "Opinie", "Realizacje", "Obszar działania"]
 const Walton = ["NIP", "KRS", "Adres siedziby"]
 
-export function Footer(props){
+const Footer = (props) => {
     return(
         <FooterContainer>
             <Row>
@@ -276,3 +276,6 @@ export function Footer(props){
         </FooterContainer>
     )
 }
+
+
+export default Footer;

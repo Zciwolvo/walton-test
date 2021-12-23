@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Plus } from '../plus';
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
   display: flex;
@@ -85,10 +84,6 @@ const QuestionBox = styled.div`
       
     }
   }
-`;
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
 `;
 
 const AnswerBox = (props) => {

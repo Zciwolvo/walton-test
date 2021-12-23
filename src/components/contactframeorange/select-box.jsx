@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import DropdownArrow from "../../assets/logo/dropboxarrow.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const SelectboxboxAbove = styled.div`
   transition: all 0.5s;
@@ -100,7 +100,7 @@ const Selectboxarrow = styled.img`
   transition: all 0.3s ease-in;
 `;
 
-const SelectBox = () => {
+const SelectBox = (props) =>{
 
   const [dropdown, setDropdown] = useState(false)
 
@@ -114,26 +114,26 @@ const SelectBox = () => {
     { value: "Temat3", id: 3 },
   ];
 
-  const [selecteditem, setSelectedItem] = useState("Wybierz temat")
-
-
   return(
-      <Selectboxbox onClick={() => dropdownstate(dropdown)}>
-      <SelectboxboxAbove onClick={() => dropdownstate(dropdown)} >
-        <p>{selecteditem}</p>
-      <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
+  <Selectboxbox onClick={() => dropdownstate(dropdown)} style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
+      <SelectboxboxAbove onClick={() => dropdownstate(dropdown)} 
+      style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
+        <Selectboxarrow src={DropdownArrow} style={{transform: dropdown ? 'rotate(-180deg)' : 'rotate(0)'}}/>
+        <p>{props.selected}</p>
       </SelectboxboxAbove>
       
-        <Selectboxselecteditem style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}> 
-          <p>{selecteditem}</p>
+        <Selectboxselecteditem style={{borderRadius: dropdown ? "10px 10px 0 0" : "10px" }}>
+          <p>{props.selected}</p>
         </Selectboxselecteditem>
         
-        <Selectboxitems style={{transform: dropdown ? "translateY(0em)" : "translateY(-3em)", visibility: dropdown ? "visible" : "hidden"}} >
+        <Selectboxitems 
+        
+        style={{transform: dropdown ? "translateY(0em)" : "translateY(-3em)", visibility: dropdown ? "visible" : "hidden"}}>
         {items.map((item) => (
                 <div
-                  style={{height: dropdown ? "48px" : "0", borderRadius: dropdown ? "0" : "10px"}}
+                  style={{height: dropdown ? "48px" : "0"}}
                   key={item.id}
-                  onClick={() => setSelectedItem(item.value)}
+                  onClick={() => props.onChange(item.value)}
                   
                 >
                   <p style={{visibility: dropdown ? "visible" : "hidden"}}>{item.value}</p>

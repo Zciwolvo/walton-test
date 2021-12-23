@@ -1,11 +1,11 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
-import { Footer } from "../../components/footer";
-import { Navbar } from "../../components/navbar";
-import { MainSection } from "./main";
-import { Siedziba } from "./siedziba";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
+import MainSection from "./main";
+import Siedziba from "./siedziba";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PageContainer = styled.div`
     width: 100%;
@@ -22,8 +22,7 @@ const PageContainer = styled.div`
     }
 `;
 
-
-export function Kontakt(params) {
+const Kontakt = (props) => {
     return(
         <PageContainer>
             <Navbar/>
@@ -33,3 +32,5 @@ export function Kontakt(params) {
         </PageContainer>
     )
 }
+
+export default Kontakt;

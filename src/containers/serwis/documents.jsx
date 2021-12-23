@@ -6,7 +6,7 @@ import photo from "../../assets/photos/Photogenica-PHX9534407@2x.png"
 import circle from "../../assets/logo/circle.png"
 import file from "../../assets/logo/file.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const MainContainer = styled.div`
   width: 70%;
@@ -275,7 +275,7 @@ const RowCenter = styled.div`
 }
 `;
 
-export function Documents(params) {
+const Documents = (params) => {
     return(
         <MainContainer>
          <HeaderContainer>
@@ -402,3 +402,5 @@ export function Documents(params) {
         </MainContainer>
     )
 }
+
+export default Documents;

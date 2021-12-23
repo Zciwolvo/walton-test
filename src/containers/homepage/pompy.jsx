@@ -4,7 +4,7 @@ import Popup from "../../components/popup";
 
 import pompy from "../../assets/photos/pompa-ciepla.jpeg"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 100%;

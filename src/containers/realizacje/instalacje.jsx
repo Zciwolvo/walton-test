@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import solary from "../../assets/photos/solar.jpg"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
   width: 70%;
@@ -100,8 +100,7 @@ const SectionContainer = styled.div`
 
 
 
-
-export function Instalacje(params) {
+const Instalacje = (params) => {
     return(
         <Container>
             <Row style={{justifyContent:"space-evenly"}}>
@@ -239,3 +238,6 @@ export function Instalacje(params) {
         </Container>
     )
 }
+
+
+export default Instalacje;

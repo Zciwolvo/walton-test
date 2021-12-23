@@ -1,14 +1,10 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-import boltLogo from "../../assets/logo/orangebolt.png";
-import rocket from "../../assets/logo/rocket.png"
-import google from "../../assets/logo/google.png"
-import map from "../../assets/logo/map.png"
 import Boxes from "../../components/boxes";
-import Star from "../../assets/logo/star.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;
@@ -225,10 +221,6 @@ opacity: 1;
     }
     `;
 
-    const StarLogo = styled.img`
-      width: 24px;
-      height: 22px;
-    `;
 
 const Historia = () => {
 

@@ -1,9 +1,9 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 
 import photo1 from "../../assets/photos/20190519_121953@2x.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
   width: 75%;
@@ -183,7 +183,7 @@ const SidesMobile = styled.div`
 `;
 
 
-export function Posty(props) {
+const Posty = (props) => {
     return(
         <Container>
             <BlueText>Wszystkie posty</BlueText>
@@ -235,3 +235,5 @@ export function Posty(props) {
         </Container>
     )
 }
+
+export default Posty;

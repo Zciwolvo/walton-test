@@ -4,7 +4,7 @@ import Popup from "../popup";
 
 import boltLogo from "../../assets/logo/bolt.png";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;

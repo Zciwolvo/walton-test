@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Link , BrowserRouter as HashRouter } from "react-router-dom";
 import styled from "styled-components";
 
 import arrowLeft from "../../assets/logo/arrow-to-right-1.png"
@@ -7,7 +7,7 @@ import arrowRight from "../../assets/logo/arrow-to-right.png"
 import House1 from "../../assets/photos/HouseSmall.png"
 import House2 from "../../assets/photos/HouseBig.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       height: 100%;

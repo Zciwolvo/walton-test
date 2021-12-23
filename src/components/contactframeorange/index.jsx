@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import SelectBox from "./select-box.jsx";
+import ErrorPopup from "../errorpopup/index.jsx";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const FrameContainer = styled.div`
     width: 100%;
@@ -181,8 +182,8 @@ color: grey;
   
 
 
-const ContactFrame = () => {
-  const [background, setBackground] = useState("#93A603");
+const ContactFrame = (props) => {
+   const [background, setBackground] = useState("#93A603");
   const [text, setText] = useState("Wyślij wiadomość. Oddzwonimy");
   const [width, SetWidth] = useState(288 * 1);
   const [height, SetHeight] = useState(48 * 1);
@@ -201,7 +202,6 @@ const ContactFrame = () => {
   const [name, setName] = useState();
   const [city, setCity] = useState();
   const [number, setNumber] = useState();
-
   const [movement, setMovement] = useState("1.9em");
   const [placeholdervalue, setPlaceholderValue] = useState("Imię i nazwisko:");
   const [placeholdervisibility, setPlaceholderVisibility] = useState("hidden");
@@ -211,6 +211,7 @@ const ContactFrame = () => {
   const [movement3, setMovement3] = useState("1.9em");
   const [placeholdervalue3, setPlaceholderValue3] = useState("Nr telefonu:");
   const [placeholdervisibility3, setPlaceholderVisibility3] = useState("hidden");
+  const [state, SetState] = useState(false)
   
   const PlaceholderStyle = (movement,placeholdervalue,placeholdervisibility) => {
     setMovement(movement)
@@ -229,13 +230,16 @@ const ContactFrame = () => {
     setPlaceholderVisibility3(placeholdervisibility3)
   }
 
-  const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
-  
-  const checkState = (name, city, number) => {
-    if (name != null && city != null && number != null) {
-      setStyle("#F58500", "DZIĘKUJEMY ZA WIADOMOŚĆ", setButtonStyle(1 * 288, 1 * 48))
-    }
+  const [selecteditem, setSelectedItem] = useState("Wybierz temat")
 
+  const checkState = () => {
+    if (name != null && city != null && number != null && selecteditem !== "Wybierz temat") {
+      setStyle("#F58500", "DZIĘKUJEMY ZA WIADOMOŚĆ", setButtonStyle(1 * 288, 1 * 48))
+      SetState(false)
+    }
+    else{
+      SetState(true)
+    }
   }
 
   return (
@@ -245,14 +249,8 @@ const ContactFrame = () => {
           <BigText>Skontaktuj się z Nami</BigText>
           <BigTextMobile>Skontaktuj się<br/>z Nami</BigTextMobile>
         
-          <SelectBox
-            placeholder={[{value:"Wybierz temat", id: 1}]}
-            items={[
-              { value: "Temat1", id: 1 },
-              { value: "Temat2", id: 2 },
-              { value: "Temat3", id: 3 },
-            ]}
-          />
+          <SelectBox selected={selecteditem} onChange={(value) => setSelectedItem(value)}/>
+
           <BarContent>
             <CustomPlaceholder style={{marginTop:movement, visibility:placeholdervisibility}}>Imię i Nazwisko:</CustomPlaceholder>
             <Bars type="text" placeholder={placeholdervalue} 
@@ -283,6 +281,7 @@ const ContactFrame = () => {
           >
             <ButtonText>{text}</ButtonText>
           </ContactButton>
+          <ErrorPopup name={name} city={city} number={number} item={selecteditem} trigger={state} setTrigger={SetState}/>
         </Frame>
     </FrameContainer>
   );

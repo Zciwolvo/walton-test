@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, BrowserRouter as Router } from "react-router-dom"
-import { Plus } from "../../components/plus";
+import Plus from "../../components/plus";
 import ContactFrame from "../../components/contactframe";
 
 const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
@@ -156,14 +156,6 @@ justify-content: flex-end;
 margin-top: -3em;
 `;
 
-const SmallContactShape = styled.div`
-display: flex;
-width: 100px;
-height: 100px;
-background: #F58500 0% 0% no-repeat padding-box;
-border-radius: 10px 10px 10px 100px;
-position: absolute;
-`;
 
 const Calculator = () => {
 

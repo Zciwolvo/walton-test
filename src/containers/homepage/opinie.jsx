@@ -4,7 +4,7 @@ import OpinionGrid from "../../components/opinions";
 
 import megaphone from "../../assets/logo/megaphone.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;

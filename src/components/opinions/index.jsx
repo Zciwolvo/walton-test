@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 100%;

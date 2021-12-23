@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import solary from "../../assets/photos/solar.jpg"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const MainContainer = styled.div`
   width: 70%;
@@ -47,7 +47,7 @@ const Picture = styled.img`
     margin-bottom: 3em;
 `;
 
-export function Pictures(params) {
+const Pictures = (params) => {
     return(
         <MainContainer>
             <Row>
@@ -75,3 +75,5 @@ export function Pictures(params) {
         </MainContainer>
     )
 }
+
+export default Pictures;

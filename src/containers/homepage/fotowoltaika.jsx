@@ -6,7 +6,7 @@ import photo1 from "../../assets/photos/Mask Group 1@2x.png"
 import photo2 from "../../assets/photos/Mask Group 2@2x.png"
 import photo3 from "../../assets/photos/Mask Group 3@2x.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
       width: 70%;

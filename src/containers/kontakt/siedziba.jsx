@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 
 import thumbLogo from "../../assets/logo/prostota.png"
@@ -7,7 +7,7 @@ import phoneLogo from "../../assets/logo/gwarancja2.png"
 import tickLogo from "../../assets/logo/dofinansowanie.png"
 import solarPhoto from "../../assets/photos/Mask Group 2@2x.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const Container = styled.div`
     width: 70%;
@@ -198,7 +198,7 @@ const RightSideLogoContainer = styled.div`
     align-items: center;
 `;
 
-export function Siedziba(params) {
+const Siedziba = (params) => {
     return(
         <Container>
             <Sides>
@@ -251,3 +251,5 @@ export function Siedziba(params) {
         </Container>
     )
 }
+
+export default Siedziba;

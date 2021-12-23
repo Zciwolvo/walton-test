@@ -7,7 +7,7 @@ import google from "../../assets/logo/google.png"
 import map from "../../assets/logo/map.png"
 import starLogo from "../../assets/logo/star.png"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
     const BoldText = styled.text`
       text-align: left;

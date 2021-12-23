@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link , BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Link , HashRouter } from "react-router-dom";
 import NavbarBurger from "../mobilenavbar";
 
 import WaltonLogo from "../../assets/logo/waltonlogo.png";
@@ -76,7 +76,7 @@ const Triangle = styled.div`
   width: 0;
 `;
 
-export function Navbar(props) {
+const Navbar = (props) => {
 
 
     return(
@@ -95,3 +95,5 @@ export function Navbar(props) {
     </Container>
     );
 }
+
+export default Navbar;

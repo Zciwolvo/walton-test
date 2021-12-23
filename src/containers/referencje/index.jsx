@@ -1,12 +1,12 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
-import { Navbar } from "../../components/navbar";
+import Navbar from "../../components/navbar";
 import Promo from "../../components/promo";
-import { MainSection } from "./main";
-import { Footer } from "../../components/footer";
-import { Pictures } from "./pictures";
+import MainSection from "./main";
+import Footer from "../../components/footer";
+import Pictures from "./pictures";
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const PageContainer = styled.div`
     width: 100%;
@@ -24,7 +24,7 @@ const PageContainer = styled.div`
 `;
 
 
-export function Referencje(params) {
+const Referencje = (params) => {
     return(
         <PageContainer>
             <Navbar/>
@@ -35,3 +35,5 @@ export function Referencje(params) {
         </PageContainer>
     )
 }
+
+export default Referencje

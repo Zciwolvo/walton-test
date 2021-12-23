@@ -1,11 +1,12 @@
-import react, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import ContactFrame from "../../components/contactframeorange";
 import Popup from "../../components/popup";
 
 import BackgroundPhoto from "../../assets/photos/father.jpeg"
 
-const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+const { innerWidth: windowWidth } = window;
 
 const MainContainer = styled.div`
   width: 70%;
@@ -197,7 +198,7 @@ font-size: 0;
     opacity: 1;
 }
 `;
-export function MainSection(params) {
+const MainSection = (params) => {
     const [width, SetWidth] = useState(288*1)
     const [height, SetHeight] = useState(48*1)
     const [state, SetState] = useState(false)
@@ -229,3 +230,5 @@ export function MainSection(params) {
         </MainContainer>
     )
 }
+
+export default MainSection;
